@@ -8,7 +8,8 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "awesome": "node scripts/generate_awesome_list.mjs",
-    "readme": "node scripts/generate_awesome_list.mjs"
+    "readme": "node scripts/generate_awesome_list.mjs",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "@use-gesture/react": "^10.3.1",
@@ -26,6 +27,7 @@
     "@types/react-dom": "^18.2.21",
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.18",
+    "gh-pages": "^6.1.1",
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.2.2",

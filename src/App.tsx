@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { JourneyMap } from './components/JourneyMap';
 import { DetailPanel } from './components/DetailPanel';
-import { graphData, NodeData } from './data/graphData';
+import { NodeData } from './data/graphData';
 import { Terminal, Twitter, Github } from 'lucide-react';
 
 function App() {

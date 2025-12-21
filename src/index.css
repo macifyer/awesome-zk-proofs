@@ -13,6 +13,7 @@
   --accent-purple: #ff79c6;
   --accent-cyan: #4ee7ff;
   --accent-amber: #ffb300;
+  --accent-orange: #ff9500;
   --text-primary: #ffffff;
   --text-secondary: #d0d0d0;
   --text-muted: #888888;
@@ -52,6 +53,10 @@ body {
 
 .glow-purple {
   box-shadow: 0 0 20px rgba(255, 121, 198, 0.3);
+}
+
+.glow-orange {
+  box-shadow: 0 0 20px rgba(255, 149, 0, 0.3);
 }
 
 .glow-text-green {

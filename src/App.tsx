@@ -12,12 +12,7 @@ function App() {
 
             {/* Header */}
             <header className="fixed top-0 left-0 w-full z-40 bg-[var(--bg-primary)]/90 backdrop-blur-md border-b border-[var(--border-color)] h-16">
-                <div className="mx-auto h-full max-w-7xl px-6 flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                        <span className="text-lg font-bold gradient-text">
-                            ZK Proofs
-                        </span>
-                    </div>
+                <div className="mx-auto h-full max-w-7xl px-6 flex items-center justify-end">
                     <div className="flex items-center gap-4">
                         <a
                             href="https://github.com/muellerberndt/awesome-zk-proofs"

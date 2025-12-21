@@ -17,21 +17,11 @@ const ResourceRow = ({ resource, index }: { resource: Resource; index: number })
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: index * 0.05 }}
-        className={`group flex flex-col p-4 border-b border-emerald-400/15 hover:bg-emerald-400/10 transition-colors ${resource.featured ? 'bg-emerald-400/10' : ''}`}
+        className="group flex flex-col p-4 border-b border-emerald-400/15 hover:bg-emerald-400/10 transition-colors"
     >
         <div className="flex justify-between items-start mb-1">
-            <div className="flex flex-wrap items-center gap-2">
-                <span className="text-[11px] uppercase tracking-[0.25em] text-emerald-100/70">
-                    {resource.type}
-                </span>
-                {resource.featured && (
-                    <span className="text-[9px] uppercase tracking-[0.35em] text-emerald-200 border border-emerald-400/40 bg-emerald-400/20 px-2 py-0.5 rounded-full">
-                        Prime Target
-                    </span>
-                )}
-            </div>
-            <span className="text-[11px] text-emerald-100/70 flex items-center">
-                {resource.featured ? 'Priority' : 'Resource'}
+            <span className="text-[11px] uppercase tracking-[0.25em] text-emerald-100/70">
+                {resource.type}
             </span>
         </div>
         <h4 className="text-sm font-semibold text-emerald-100 group-hover:text-emerald-200 transition-colors flex items-center mb-1">
@@ -46,11 +36,9 @@ const ResourceRow = ({ resource, index }: { resource: Resource; index: number })
 );
 
 export const DetailPanel: React.FC<DetailPanelProps> = ({ node, onClose }) => {
-    const featuredResources = (node?.resources ?? [])
-        .filter(resource => resource.featured)
-        .sort((a, b) => b.rating - a.rating);
-    const otherResources = (node?.resources ?? [])
-        .filter(resource => !resource.featured)
+    // Sort resources by rating (highest first)
+    const sortedResources = (node?.resources ?? [])
+        .slice()
         .sort((a, b) => b.rating - a.rating);
 
     return (
@@ -110,47 +98,16 @@ export const DetailPanel: React.FC<DetailPanelProps> = ({ node, onClose }) => {
                             </div>
 
                             <div className="bg-[#04070d]">
-                                {featuredResources.length > 0 ? (
-                                    <>
-                                        <div className="px-6 py-2 bg-emerald-400/10 text-[10px] text-emerald-200 uppercase tracking-[0.35em] border-b border-emerald-400/20">
-                                            Prime Targets
-                                        </div>
-                                        {featuredResources.map((res, i) => (
-                                            <ResourceRow
-                                                key={res.url || res.title}
-                                                resource={res}
-                                                index={i}
-                                            />
-                                        ))}
-                                        {otherResources.length > 0 && (
-                                            <>
-                                                <div className="px-6 py-2 bg-emerald-400/5 text-[10px] text-emerald-100/70 uppercase tracking-[0.35em] border-b border-emerald-400/10">
-                                                    Additional Intel
-                                                </div>
-                                                {otherResources.map((res, i) => (
-                                                    <ResourceRow
-                                                        key={`${res.url || res.title}-more`}
-                                                        resource={res}
-                                                        index={i}
-                                                    />
-                                                ))}
-                                            </>
-                                        )}
-                                    </>
-                                ) : (
-                                    <>
-                                        <div className="px-6 py-2 bg-emerald-400/10 text-[10px] text-emerald-100/70 uppercase tracking-[0.35em] border-b border-emerald-400/20">
-                                            Curated Intel
-                                        </div>
-                                        {node.resources.map((res, i) => (
-                                            <ResourceRow
-                                                key={res.url || res.title}
-                                                resource={res}
-                                                index={i}
-                                            />
-                                        ))}
-                                    </>
-                                )}
+                                <div className="px-6 py-2 bg-emerald-400/10 text-[10px] text-emerald-100/70 uppercase tracking-[0.35em] border-b border-emerald-400/20">
+                                    Resources
+                                </div>
+                                {sortedResources.map((res, i) => (
+                                    <ResourceRow
+                                        key={res.url || res.title}
+                                        resource={res}
+                                        index={i}
+                                    />
+                                ))}
                             </div>
                         </div>
 

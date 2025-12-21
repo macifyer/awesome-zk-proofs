@@ -33,12 +33,15 @@ const buildAwesomeList = (graphData) => {
   const seen = new Set();
 
   graphData.forEach((node) => {
-    const nodeItems = node.resources.filter((resource) => {
-      const key = resource.url || resource.title;
-      if (!key || seen.has(key)) return false;
-      seen.add(key);
-      return true;
-    });
+    // Sort by rating (highest first), then filter duplicates
+    const nodeItems = [...node.resources]
+      .sort((a, b) => (b.rating || 0) - (a.rating || 0))
+      .filter((resource) => {
+        const key = resource.url || resource.title;
+        if (!key || seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      });
 
     if (nodeItems.length === 0) {
       return;

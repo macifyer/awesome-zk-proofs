@@ -4,9 +4,8 @@ export interface Resource {
   author?: string;
   url: string;
   type: 'Article' | 'Video' | 'Book' | 'Course' | 'Tool' | 'Paper' | 'Podcast' | 'Newsletter' | 'Community' | 'Program' | 'Organization';
-  rating: number; // 1-10
+  rating: number; // 1-10, used for sorting (not displayed)
   description: string;
-  featured?: boolean;
 }
 
 export interface NodeData {
@@ -33,16 +32,14 @@ export const graphData: NodeData[] = [
         "type": "Article",
         "rating": 8,
         "description": "Classic illustrated primer explaining ZK proofs with simple examples.",
-        "featured": true
-      },
+              },
       {
         "title": "ZKP Overview: History, Proving Systems, Circuits, Compilers",
         "url": "https://zkp.science",
         "type": "Article",
         "rating": 8,
         "description": "Curated overview of ZKP history with links to foundational primers and system guides.",
-        "featured": true
-      },
+              },
       {
         "title": "History of Zero-Knowledge Proofs (LambdaClass)",
         "url": "https://blog.lambdaclass.com/our-highly-subjective-view-on-the-history-of-zero-knowledge-proofs/",
@@ -111,8 +108,7 @@ export const graphData: NodeData[] = [
         "type": "Book",
         "rating": 8,
         "description": "Applied cryptography textbook by Boneh and Shoup; solid math and protocol prep.",
-        "featured": true
-      },
+              },
       {
         "title": "Computational Introduction to Number Theory and Algebra",
         "url": "https://shoup.net/ntb/ntb-v2.pdf",
@@ -133,8 +129,7 @@ export const graphData: NodeData[] = [
         "type": "Book",
         "rating": 8,
         "description": "Free textbook covering finite fields, elliptic curves, and pairing-based cryptography for SNARKs.",
-        "featured": true
-      },
+              },
       {
         "title": "Modern Computer Algebra",
         "url": "https://maths-people.anu.edu.au/~brent/pd/mca-cup-0.5.9.pdf",
@@ -169,8 +164,7 @@ export const graphData: NodeData[] = [
         "type": "Article",
         "rating": 8,
         "description": "Multi-part walkthrough of SNARK construction from commitments to pairings.",
-        "featured": false
-      }
+              }
     ],
     "x": -1.6,
     "y": -0.8,
@@ -188,8 +182,7 @@ export const graphData: NodeData[] = [
         "type": "Paper",
         "rating": 8,
         "description": "Foundational paper on succinct non-interactive zero-knowledge arguments.",
-        "featured": true
-      },
+              },
       {
         "title": "Succinct NIZK without the PCP Theorem",
         "url": "http://www0.cs.ucl.ac.uk/staff/J.Groth/ShortNIZK.pdf",
@@ -224,40 +217,35 @@ export const graphData: NodeData[] = [
         "type": "Article",
         "rating": 9,
         "description": "Article covering On Interactive Proofs and Zero-Knowledge: A Primer.",
-        "featured": true
-      },
+              },
       {
         "title": "Proofs, Arguments, and Zero-Knowledge",
         "url": "https://people.cs.georgetown.edu/jthaler/ProofsArgsAndZK.pdf",
         "type": "Book",
         "rating": 9,
         "description": "Lecture notes on ZKP definitions, soundness, and cryptographic assumptions.",
-        "featured": true
-      },
+              },
       {
         "title": "The RareSkills Book of Zero Knowledge",
         "url": "https://www.rareskills.io/zk-book",
         "type": "Book",
         "rating": 9,
         "description": "In-depth, practical book that spans ZK intuition through modern systems.",
-        "featured": true
-      },
+              },
       {
         "title": "RareSkills ZK Bootcamp",
         "url": "https://www.rareskills.io/zk-bootcamp",
         "type": "Course",
         "rating": 9,
         "description": "Structured course that walks through circuits, constraints, and proof systems.",
-        "featured": true
-      },
+              },
       {
         "title": "ZkStudyClub: Polynomial Commitments (series)",
         "url": "https://www.youtube.com/watch?v=bz16BURH_u8",
         "type": "Video",
         "rating": 9,
         "description": "Three-part session on polynomial commitments with Justin Drake.",
-        "featured": true
-      }
+              }
     ],
     "x": 0,
     "y": 0.4,
@@ -299,24 +287,21 @@ export const graphData: NodeData[] = [
         "type": "Article",
         "rating": 10,
         "description": "Vitalik Buterin's comprehensive guide to QAPs, explaining the mathematics behind SNARKs.",
-        "featured": true
-      },
+              },
       {
         "title": "Circuit Optimisation Handout",
         "url": "https://docs.google.com/document/d/1aZ1GUAJOBFuqD4GOo9HqAH8w4xJo7HM4Bjte5-wkdnU/edit",
         "type": "Article",
         "rating": 9,
         "description": "Article covering Circuit Optimisation Handout.",
-        "featured": true
-      },
+              },
       {
         "title": "Circom: zkSnark circuit compiler",
         "url": "https://github.com/iden3/circom",
         "type": "Tool",
         "rating": 9,
         "description": "Tooling and codebase for Circom: zkSnark circuit compiler.",
-        "featured": true
-      },
+              },
       {
         "title": "RCC: Rust Circuit Compiler",
         "url": "https://github.com/delendum-xyz/rcc",
@@ -378,16 +363,14 @@ export const graphData: NodeData[] = [
         "type": "Article",
         "rating": 8,
         "description": "a long and very nice gradual explanation",
-        "featured": true
-      },
+              },
       {
         "title": "Bulletproofs: Short Proofs for Confidential Transactions and More",
         "url": "https://eprint.iacr.org/2017/1066.pdf",
         "type": "Paper",
         "rating": 10,
         "description": "Original Bulletproofs paper introducing inner-product arguments for range proofs.",
-        "featured": true
-      },
+              },
       {
         "title": "Bulletproofs Notes and Resources",
         "url": "https://github.com/sdiehl/bulletproofs",
@@ -451,6 +434,13 @@ export const graphData: NodeData[] = [
     "description": "Execution traces, AIR, and FRI for transparent proofs.",
     "resources": [
       {
+        "title": "StarkLab",
+        "url": "https://floatingpragma.io/starklab/",
+        "type": "Tool",
+        "rating": 10,
+        "description": "An interactive, step-by-step tutorial to understand STARK proofs intuitively.",
+              },
+      {
         "title": "Introduction to SNARKs/STARKs by Eli Ben-Sasson",
         "url": "https://www.youtube.com/watch?v=VUN35BC11Qw",
         "type": "Video",
@@ -477,24 +467,21 @@ export const graphData: NodeData[] = [
         "type": "Article",
         "rating": 9,
         "description": "Multi-part guide to STARK design, AIR, and FRI mechanics.",
-        "featured": true
-      },
+              },
       {
         "title": "STARKs (series)",
         "url": "https://vitalik.eth.limo/general/2017/11/09/starks_part_1.html",
         "type": "Article",
         "rating": 8,
         "description": "Vitalik Buterin's multi-part series introducing STARKs and FRI.",
-        "featured": false
-      },
+              },
       {
         "title": "Brainfuck STARK Tutorial",
         "url": "https://neptune.cash/learn/brainfuck-tutorial/",
         "type": "Article",
         "rating": 9,
         "description": "Hands-on tutorial building a STARK for Brainfuck programs (uses simple esoteric language to focus on STARK mechanics).",
-        "featured": false
-      }
+              }
     ],
     "x": 3.6,
     "y": 1.8,
@@ -521,8 +508,7 @@ export const graphData: NodeData[] = [
         "type": "Article",
         "rating": 9,
         "description": "Article covering zkSNARKs in a nutshell.",
-        "featured": true
-      },
+              },
       {
         "title": "Comments on paper: zkSNARKs in a Nutshell by Aaron",
         "url": "https://github.com/ventali/awesome-zk/tree/main/zk-intro",
@@ -536,8 +522,7 @@ export const graphData: NodeData[] = [
         "type": "Article",
         "rating": 9,
         "description": "Article covering An approximate introduction to how zk-SNARKs are possible.",
-        "featured": true
-      },
+              },
       {
         "title": "“SNARK” terminology and characterization of existence",
         "url": "https://eprint.iacr.org/2011/443.pdf",
@@ -551,8 +536,7 @@ export const graphData: NodeData[] = [
         "type": "Article",
         "rating": 9,
         "description": "Article covering Understanding PLONK.",
-        "featured": true
-      },
+              },
       {
         "title": "SNARKs for C: Verifying Program Executions Succinctly and in Zero Knowledge",
         "url": "https://eprint.iacr.org/2013/507.pdf",
@@ -607,8 +591,7 @@ export const graphData: NodeData[] = [
         "type": "Video",
         "rating": 9,
         "description": "Video session covering STARK @ Home {video playlist}.",
-        "featured": true
-      },
+              },
       {
         "title": "Transparent Succinct Arguments by Alessandro Chiesa (Oct 2018)",
         "url": "https://gist.github.com/Haseeb-Qureshi/f552fdbbb649ed4bbfeb681beb4091e1",
@@ -629,16 +612,14 @@ export const graphData: NodeData[] = [
         "type": "Article",
         "rating": 9,
         "description": "Article covering Introduction to ZK-STARKs by remco@0x.org.",
-        "featured": true
-      },
+              },
       {
         "title": "The STARK paper",
         "url": "https://eprint.iacr.org/2018/046.pdf",
         "type": "Paper",
         "rating": 10,
         "description": "Seminal STARK paper introducing AIR and FRI for transparent proofs.",
-        "featured": true
-      },
+              },
       {
         "title": "libstark implementation",
         "url": "https://github.com/elibensasson/libSTARK",
@@ -700,8 +681,7 @@ export const graphData: NodeData[] = [
         "type": "Article",
         "rating": 9,
         "description": "Article covering Trusted Setup Workshop by 0xparc.",
-        "featured": true
-      },
+              },
       {
         "title": "Setup Ceremonies",
         "url": "https://zkproof.org/2021/06/30/setup-ceremonies/",
@@ -722,8 +702,7 @@ export const graphData: NodeData[] = [
         "type": "Article",
         "rating": 9,
         "description": "Article covering How do trusted setups work?.",
-        "featured": true
-      },
+              },
       {
         "title": "Announcing the Perpetual Powers of Tau Ceremony to benefit all zk-SNARK projects",
         "url": "https://medium.com/coinmonks/announcing-the-perpetual-powers-of-tau-ceremony-to-benefit-all-zk-snark-projects-c3da86af8377",
@@ -751,8 +730,7 @@ export const graphData: NodeData[] = [
         "type": "Video",
         "rating": 9,
         "description": "Video session covering Zero knowledge, subversion resistance, and concrete attacks | Steven Goldfeder | RWC 2018.",
-        "featured": true
-      }
+              }
     ],
     "x": 5.2,
     "y": -2.2,
@@ -772,8 +750,7 @@ export const graphData: NodeData[] = [
         "type": "Tool",
         "rating": 8,
         "description": "Interactive StarkNet/Cairo lab for hands-on exploration and experiments.",
-        "featured": true
-      },
+              },
       {
         "title": "Miden: STARK-based zero-knowledge virtual machine",
         "url": "https://github.com/0xPolygonMiden/miden-vm",
@@ -794,8 +771,7 @@ export const graphData: NodeData[] = [
         "type": "Article",
         "rating": 9,
         "description": "Article covering StarkNet: permissionless decentralized ZK-Rollup.",
-        "featured": true
-      },
+              },
       {
         "title": "Polygon Miden: a STARK-based zkRollup",
         "url": "https://polygon.technology/solutions/polygon-miden/",
@@ -844,8 +820,7 @@ export const graphData: NodeData[] = [
         "type": "Article",
         "rating": 8,
         "description": "A comprehensive, annotated list repos in STARKNET",
-        "featured": true
-      }
+              }
     ],
     "x": 5.8,
     "y": 4,
@@ -865,8 +840,7 @@ export const graphData: NodeData[] = [
         "type": "Course",
         "rating": 8,
         "description": "Official Circom + SnarkJS tutorial with circuit and proof workflow.",
-        "featured": true
-      },
+              },
       {
         "title": "0xPARC circom and Halo2 learning resources",
         "url": "https://learn.0xparc.org",
@@ -922,8 +896,7 @@ export const graphData: NodeData[] = [
         "type": "Tool",
         "rating": 7,
         "description": "Rust libraries for fields, curves, pairings, and constraint systems.",
-        "featured": true
-      },
+              },
       {
         "title": "ZoKrates: a toolbox for zkSNARKs on Ethereum",
         "url": "https://zokrates.github.io/",
@@ -937,8 +910,7 @@ export const graphData: NodeData[] = [
         "type": "Tool",
         "rating": 9,
         "description": "Tooling and codebase for Snarkjs: zkSNARK implementation in JavaScript & WASM.",
-        "featured": true
-      },
+              },
       {
         "title": "The State of Current Progress",
         "url": "https://delendum.xyz/2022/09/04/formal-verification-zk-constraint-systems.html#the-state-of-current-progress",
@@ -972,16 +944,14 @@ export const graphData: NodeData[] = [
         "type": "Paper",
         "rating": 9,
         "description": "Concise notes on Halo recursion and inner-product arguments.",
-        "featured": true
-      },
+              },
       {
         "title": "Matter Labs zkEVM",
         "url": "https://blog.matter-labs.io/unisync-a-port-of-uniswap-v2-on-the-zkevm-b12954748504",
         "type": "Article",
         "rating": 9,
         "description": "Article covering Matter Labs zkEVM.",
-        "featured": true
-      },
+              },
       {
         "title": "Hermez zkEVM",
         "url": "https://blog.hermez.io/introducing-hermez-zkevm/",
@@ -995,8 +965,7 @@ export const graphData: NodeData[] = [
         "type": "Article",
         "rating": 8,
         "description": "and their [zkEVM](https://hackmd.io/@yezhang/S1_KMMbGt)",
-        "featured": true
-      },
+              },
       {
         "title": "Appliedzkp: Circuits for zkEVM",
         "url": "https://github.com/appliedzkp/zkevm-circuits",
@@ -1031,24 +1000,21 @@ export const graphData: NodeData[] = [
         "type": "Article",
         "rating": 8,
         "description": "Proof size reduction",
-        "featured": true
-      },
+              },
       {
         "title": "Recursive Proof Composition without a Trusted Setup",
         "url": "https://eprint.iacr.org/2019/1021.pdf",
         "type": "Paper",
         "rating": 9,
         "description": "Research paper on Recursive Proof Composition without a Trusted Setup.",
-        "featured": true
-      },
+              },
       {
         "title": "Georgetown University COSC 544 Class Notes",
         "url": "https://people.cs.georgetown.edu/jthaler/COSC544.html",
         "type": "Article",
         "rating": 9,
         "description": "Article covering Georgetown University COSC 544 Class Notes.",
-        "featured": true
-      },
+              },
       {
         "title": "Pinocchio: Nearly Practical Verifiable Computation",
         "url": "https://eprint.iacr.org/2013/279.pdf",
@@ -1118,8 +1084,7 @@ export const graphData: NodeData[] = [
         "type": "Article",
         "rating": 8,
         "description": "Hands-on guide to building a ZK dApp with Circom and SnarkJS.",
-        "featured": true
-      },
+              },
       {
         "title": "Delphinus zkWASM",
         "url": "https://delphinuslab.com/zk-wasm/",

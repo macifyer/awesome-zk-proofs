@@ -293,6 +293,15 @@ export const graphData: NodeData[] = [
         "description": "Step-by-step tutorial constructing QAPs from R1CS with worked examples."
       },
       {
+        "title": "Quadratic Arithmetic Programs: from Zero to Hero",
+        "author": "Vitalik Buterin",
+        "url": "https://medium.com/@VitalikButerin/quadratic-arithmetic-programs-from-zero-to-hero-f6d558cea649",
+        "type": "Article",
+        "rating": 10,
+        "description": "Vitalik Buterin's comprehensive guide to QAPs, explaining the mathematics behind SNARKs.",
+        "featured": true
+      },
+      {
         "title": "Circuit Optimisation Handout",
         "url": "https://docs.google.com/document/d/1aZ1GUAJOBFuqD4GOo9HqAH8w4xJo7HM4Bjte5-wkdnU/edit",
         "type": "Article",
@@ -483,8 +492,8 @@ export const graphData: NodeData[] = [
         "url": "https://neptune.cash/learn/brainfuck-tutorial/",
         "type": "Article",
         "rating": 9,
-        "description": "Hands-on tutorial building a STARK for Brainfuck programs.",
-        "featured": true
+        "description": "Hands-on tutorial building a STARK for Brainfuck programs (uses simple esoteric language to focus on STARK mechanics).",
+        "featured": false
       }
     ],
     "x": 3.6,

@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "awesome": "node scripts/generate_awesome_list.mjs"
+    "awesome": "node scripts/generate_awesome_list.mjs",
+    "readme": "node scripts/generate_awesome_list.mjs"
   },
   "dependencies": {
     "@use-gesture/react": "^10.3.1",

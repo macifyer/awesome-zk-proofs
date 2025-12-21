@@ -48,6 +48,7 @@ R1CS, QAPs, and circuit construction for SNARKs.
 - [Arithmetization schemes for ZK-SNARKs](https://blog.lambdaclass.com/arithmetization-schemes-for-zk-snarks/) - Compares R1CS, AIR, and PLONK-style arithmetization approaches.
 - [Quadratic Arithmetic Programs (QAPs) and R1CS](https://alinush.github.io/r1cs) - Deep dive on expressing NP relations as R1CS and QAPs with notation and history.
 - [Quadratic Arithmetic Programs (RareSkills)](https://rareskills.io/post/quadratic-arithmetic-program) - Step-by-step tutorial constructing QAPs from R1CS with worked examples.
+- [Quadratic Arithmetic Programs: from Zero to Hero](https://medium.com/@VitalikButerin/quadratic-arithmetic-programs-from-zero-to-hero-f6d558cea649) - Vitalik Buterin's comprehensive guide to QAPs, explaining the mathematics behind SNARKs.
 - [Circuit Optimisation Handout](https://docs.google.com/document/d/1aZ1GUAJOBFuqD4GOo9HqAH8w4xJo7HM4Bjte5-wkdnU/edit) - Article covering Circuit Optimisation Handout.
 - [Circom: zkSnark circuit compiler](https://github.com/iden3/circom) - Tooling and codebase for Circom: zkSnark circuit compiler.
 - [RCC: Rust Circuit Compiler](https://github.com/delendum-xyz/rcc) - Tooling and codebase for RCC: Rust Circuit Compiler.
@@ -78,7 +79,7 @@ Execution traces, AIR, and FRI for transparent proofs.
 - [ZK Hack Whiteboard: SNARKs vs. STARKs](https://zkhack.dev/whiteboard/module-four/) - Whiteboard session comparing SNARK and STARK tradeoffs.
 - [Anatomy of a STARK](https://aszepieniec.github.io/stark-anatomy/overview) - Multi-part guide to STARK design, AIR, and FRI mechanics.
 - [STARKs (series)](https://vitalik.eth.limo/general/2017/11/09/starks_part_1.html) - Vitalik Buterin's multi-part series introducing STARKs and FRI.
-- [Brainfuck STARK Tutorial](https://neptune.cash/learn/brainfuck-tutorial/) - Hands-on tutorial building a STARK for Brainfuck programs.
+- [Brainfuck STARK Tutorial](https://neptune.cash/learn/brainfuck-tutorial/) - Hands-on tutorial building a STARK for Brainfuck programs (uses simple esoteric language to focus on STARK mechanics).
 
 ### SNARK Systems
 Groth16, PLONK, Halo, and modern SNARK variants.

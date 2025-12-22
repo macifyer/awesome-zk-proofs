@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { JourneyMap } from './components/JourneyMap';
 import { NodeData } from './data/graphData';
-import { ExternalLink, Sparkles } from 'lucide-react';
+import { Star, Sparkles, Github } from 'lucide-react';
 
 function App() {
     const [selectedNode, setSelectedNode] = useState<NodeData | null>(null);
@@ -29,18 +29,17 @@ function App() {
                         </span>
                     </a>
 
-                    {/* GitHub Link */}
-                    <div className="flex items-center gap-4">
-                        <a
-                            href="https://github.com/muellerberndt/awesome-zk-proofs"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-2 text-[var(--text-muted)] hover:text-[var(--accent-green)] transition-colors text-sm"
-                        >
-                            <ExternalLink className="w-4 h-4" />
-                            <span className="hidden sm:inline">GitHub</span>
-                        </a>
-                    </div>
+                    {/* GitHub Star */}
+                    <a
+                        href="https://github.com/muellerberndt/awesome-zk-proofs"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group flex items-center gap-1.5 text-[var(--text-muted)] hover:text-[var(--accent-amber)] transition-colors text-sm"
+                    >
+                        <Github className="w-4 h-4" />
+                        <Star className="w-3.5 h-3.5 group-hover:fill-[var(--accent-amber)] transition-all" />
+                        <span className="hidden sm:inline text-xs">Star</span>
+                    </a>
                 </div>
             </header>
 

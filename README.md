@@ -1,6 +1,15 @@
 # Awesome Zero-Knowledge Proofs
 
-A curated, annotated list of primers, papers, tools, and systems for zero-knowledge proofs.
+[![Website](https://img.shields.io/badge/View%20Interactive%20Version-floatingpragma.io-00ff41?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyek0xMSAxOS45M2MtMy45NS0uNDktNy0zLjg1LTctNy45MyAwLS42Mi4wOC0xLjIxLjIxLTEuNzlMOSAxNXYxYzAgMS4xLjkgMiAyIDJ2MS45M3ptNi45LTIuNTRjLS4yNi0uODEtMS0xLjM5LTEuOS0xLjM5aC0xdi0zYzAtLjU1LS40NS0xLTEtMUg4di0yaDJjLjU1IDAgMS0uNDUgMS0xVjdoMmMxLjEgMCAyLS45IDItMnYtLjQxYzIuOTMgMS4xOSA1IDQuMDYgNSA3LjQxIDAgMi4wOC0uOCAzLjk3LTIuMSA1LjM5eiIvPjwvc3ZnPg==)](https://floatingpragma.io/)
+[![STARK Lab](https://img.shields.io/badge/Try%20STARK%20Lab-Interactive%20Tutorial-ff79c6?style=for-the-badge)](https://floatingpragma.io/starklab/)
+
+> **[View the interactive web version at floatingpragma.io](https://floatingpragma.io/)** - A visual learning path with curated resources organized by topic.
+>
+> **[Try STARK Lab](https://floatingpragma.io/starklab/)** - An interactive, step-by-step tutorial to understand STARK proofs intuitively.
+
+---
+
+A curated, annotated list of primers, papers, tools, and systems for zero-knowledge proofs. This README provides a traditional "awesome list" format, while the [web version](https://floatingpragma.io/) offers an interactive learning path with three parallel tracks: **SNARKs**, **STARKs**, and **Bulletproofs/IPA**.
 
 ### ZKP Intuition & Introductions
 High-level intuition, core ideas, and why zero-knowledge matters.
